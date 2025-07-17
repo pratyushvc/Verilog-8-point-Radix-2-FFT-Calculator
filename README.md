@@ -31,3 +31,8 @@ This makes the design more practical for hardware accelerators in low-power embe
 
 **decimal_fft_tb.v**- Testbench (included custom input values of {32.20, 12.19, -0.20, 42.00, -32.10, 23.00, 100, 0.7} and singalled rin2_flag =1 to indicate -0.2) 
 
+# Improvements to be made
+- Shift to array based inputs
+- Scale up to higher point FFT calculation
+- Optimise printing of output in testbench by comparing with output flags
+
