@@ -19,15 +19,15 @@ This makes the design more practical for hardware accelerators in low-power embe
 # Files
 
 **decimal_fft.v**- 
-The flags rin0_flag, rin1_flag similarly until rin7_flag represent the input flags which indicate whether are negative decimal values like -0.2,-0.86,etc. (have to be enabled to 1)
-rin0_whole, rin1_whole uptil rin7_whole indicate the (signed) 16 bit real whole number inputs
-rin0_frac, rin1_frac uptil rin7_frac indicate the 16 bit real fractional number inputs
-rout0_whole, rout1_whole uptil rout7_whole indicate the (signed) 16 bit real whole number outputs.
-rout0_frac, rout1_frac uptil rout7_frac indicate the 16 bit real fractional number outputs.
-iout0_whole, iout1_whole uptil iout7_whole indicate the (signed) 16 bit imaginary whole number outputs.
-iout0_frac, iout1_frac uptil iout7_frac indicate the 16 bit imaginary whole number outputs.
-rout0_flag, rout1_flag uptil rout7_flag carry the same functionality for real outputs
-iout0_flag, iout1_flag uptil iout7_flag carry the same functionality for real outputs
+- The flags rin0_flag, rin1_flag similarly until rin7_flag represent the input flags which indicate whether are negative decimal values like -0.2,-0.86,etc. (have to be enabled to 1)
+- rin0_whole, rin1_whole uptil rin7_whole indicate the (signed) 16 bit real whole number inputs
+- rin0_frac, rin1_frac uptil rin7_frac indicate the 16 bit real fractional number inputs
+- rout0_whole, rout1_whole uptil rout7_whole indicate the (signed) 16 bit real whole number outputs.
+- rout0_frac, rout1_frac uptil rout7_frac indicate the 16 bit real fractional number outputs.
+- iout0_whole, iout1_whole uptil iout7_whole indicate the (signed) 16 bit imaginary whole number outputs.
+- iout0_frac, iout1_frac uptil iout7_frac indicate the 16 bit imaginary whole number outputs.
+- rout0_flag, rout1_flag uptil rout7_flag carry the same functionality for real outputs
+- iout0_flag, iout1_flag uptil iout7_flag carry the same functionality for real outputs
 
 **decimal_fft_tb.v**- Testbench (included custom input values of {32.20, 12.19, -0.20, 42.00, -32.10, 23.00, 100, 0.7} and singalled rin2_flag =1 to indicate -0.2) 
 
