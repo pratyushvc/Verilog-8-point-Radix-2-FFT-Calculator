@@ -320,7 +320,7 @@ reg [0:0] si7_flag;
     endtask
 
     task CMul_707_j707;
-
+    // Multiply by (0.707 - j0.707) 
     inout  reg signed [15:0] arWhole;  // Real whole part of input A
     inout  reg [15:0] arFrac;   // Real frac part of input A
     
@@ -338,7 +338,7 @@ reg [0:0] si7_flag;
       reg [0:0]ioFlag;
      
     begin
-    // Multiply by (0.707 - j0.707) ≈ (181 - j181)
+    // Multiply by (0.707 - j0.707) 
     CMul(arWhole,arFrac, aiWhole, aiFrac,16'sd0,16'd70,16'sd0,16'd70, arFlag, aiFlag, 1'b0,1'b1,roWhole,roFrac,ioWhole,ioFrac,roFlag,ioFlag);
     arWhole=roWhole;
     arFrac=roFrac;
@@ -350,6 +350,7 @@ reg [0:0] si7_flag;
     endtask     
 
     task CMul_minus707_j707;   
+    // Multiply by (-0.707 - j0.707) 
     inout  reg signed [15:0] arWhole;  // Real whole part of input A
     inout  reg [15:0] arFrac;   // Real frac part of input A
     
@@ -367,7 +368,7 @@ reg [0:0] si7_flag;
       reg [0:0]ioFlag;
      
     begin
-    // Multiply by (-0.707 - j0.707) ≈ (-181 - j181)
+    // Multiply by (-0.707 - j0.707) 
     CMul(arWhole,arFrac, aiWhole, aiFrac,16'sd0,16'd70,16'sd0,16'd70, arFlag, aiFlag, 1'b1,1'b1,roWhole,roFrac,ioWhole,ioFrac,roFlag,ioFlag);
     arWhole=roWhole;
     arFrac=roFrac;
